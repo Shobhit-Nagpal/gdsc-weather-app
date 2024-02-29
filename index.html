@@ -1,12 +1,48 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather.io</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-blue-200 flex flex-col items-center justify-center">
+    <div class="w-screen">
+      <div class="container mx-auto flex flex-col items-center justify-center">
+        <h1 class="font-bold text-4xl p-2 mt-10">Weather.io</h1>
+      </div>
+      <div class="container mx-auto p-4 mt-5">
+        <form>
+        <div class="search-area mb-8 flex flex-col items-center justify-center">
+          <div class="relative">
+              <input
+                type="text"
+                id="weatherInput"
+                placeholder=" "
+                class="peer block w-full px-3 py-2 bg-transparent text-xl border-b-2 border-gray-800 focus:outline-none focus:border-blue-500"
+              />
+              <label
+                for="weatherInput"
+                class="absolute left-0 -top-3.5 hover:cusor-text text-gray-600 text-sm transition-all peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-placeholder-shown:top-2 peer-focus:-top-3.5 peer-focus:text-blue-500 peer-focus:text-sm"
+                >Enter city</label
+              >
+          </div>
+          <div class="m-5">
+            <button
+              class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+              id="weatherBtn"
+            >
+              Get weather
+            </button>
+          </div>
+        </form>
+        </div>
+        <div class="weather-display">
+          <div class="bg-white rounded-lg p-6 shadow-lg">
+            <!-- Weather content here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
