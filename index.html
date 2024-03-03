@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather.io</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./script.js" defer></script>
   </head>
   <body class="bg-blue-200 flex flex-col items-center justify-center">
     <div class="w-screen">
@@ -38,8 +39,19 @@
         </form>
         </div>
         <div class="weather-display">
-          <div class="bg-white rounded-lg p-6 shadow-lg">
-            <!-- Weather content here -->
+          <div class="bg-white rounded-lg p-6 shadow-lg flex flex-col items-center justify-center">
+            <!-- Location data -->
+            <div>
+              <p id="city" class="text-3xl font-bold"></p>
+            </div>
+
+            <!-- Weather data -->
+            <div>
+              <p id="feels_like" class="text-lg mt-2"></p>
+              <p id="actual_temp" class="text-lg mt-2"></p>
+              <p id="wind_speed" class="text-lg mt-2"></p>
+              <p id="humidity" class="text-lg mt-2"></p>
+            </div>
           </div>
         </div>
       </div>
