@@ -9,7 +9,7 @@ console.log(dataContainer);
 const city = "Delhi";
 
 async function getWeather() {
-  const url = ``;
+  const url = `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=no`;
   const response = await fetch(url);
   console.log(response);
 }
