@@ -1,4 +1,4 @@
-const API_KEY = "";
+const API_KEY = "8c7d1cc05af54248a4b90328240303";
 // Note: NEVER EVER LEAK API KEY LIKE THIS
 
 //Select all elements where we will show data
@@ -22,6 +22,10 @@ weatherBtn.addEventListener("click", async (e) => {
   const city = document.getElementById("weatherInput").value;
   console.log(city);
   const result = await getWeather(city);
+  if (result.error) {
+    alert("Input not valid");
+    return;
+  }
   console.log(result);
   const location = result.location;
   const weatherData = result.current;
